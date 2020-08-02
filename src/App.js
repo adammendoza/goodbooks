@@ -1,25 +1,21 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+
+// import HorizontalBar from './Repeat/HorizontalBar';
+import VerticalBar from './Repeat/VerticalBar';
+
+import {GlobalProvider} from './contexts/store';
+
+import './App.css'
 
 function App() {
   return (
+    <GlobalProvider>
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/* <HorizontalBar/> */}
+        <VerticalBar/>
+        
     </div>
+    </GlobalProvider>
   );
 }
 
